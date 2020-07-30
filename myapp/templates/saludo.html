@@ -1,3 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Saludo
+{% endblock %}
+
+{% block content %}
+
+<!--En caso de que no existe este bloque, sólo aparecerá el que tiene el block en layout, y en caso de que exista esto, lo reemplaza.-->
+<!--En caso de que se quiera mantener los dos contenidos, crear este bloque y dentro colocar {{block.super}}-->
+
+{{block.super}}
+
 <h1>Bienvenidos</h1>
 <h2>Michael Condori Mavila</h2>
 <h3>Clase de Django<h3>
+
+{% endblock %}
