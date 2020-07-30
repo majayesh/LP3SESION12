@@ -13,8 +13,14 @@
     </head>
 
     <body>
-        <h1>Proyecto Web (LP3) | Michael Condori Mavila</h1>
-        <hr>
+        <header>
+            <div id="logotipo">
+                <img src="{% static 'images/django.png' %}">
+                <h1>Proyecto Web (LP3) | Michael Condori Mavila</h1>
+            </div>
+        </header>
+
+        <nav>
             <ul>
                 <li>
                     <a href="/inicio"> Inicio </a>
@@ -29,14 +35,21 @@
                     <a href="/rango2/10/15"> Mostrar Números [10,15] </a>
                 </li>
             </ul>
-        </hr>
-        <div id="content">
-            {% block content %}
-            <strong>Contenido en layout (Padre)</strong>
+        </nav>
 
-            {% endblock %}
+        <div class="barra">
+            <span class="esquina-izquierda"></span>
+            <span class="relleno-barra"></span>
+            <span class="esquina-derecha"></span>
         </div>
 
+        <div id="content">
+            <div class="box">
+                {% block content %}
+                <strong>Contenido en layout (Padre)</strong>
+                {% endblock %}
+            </div>
+        </div>
         <footer>
             UNTELS - Lenguaje de Programación III &COPY; Michael Condori Mavila
         </footer>
